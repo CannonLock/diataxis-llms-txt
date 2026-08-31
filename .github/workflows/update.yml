@@ -23,13 +23,17 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository with submodules
+      - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Update diataxis submodule to latest upstream
-        run: git submodule update --remote --checkout diataxis
+        # --init makes this step self-sufficient: it initializes the
+        # submodule if needed, then checks out the latest commit from the
+        # upstream tracking branch. Without --init, git silently skips
+        # uninitialized submodules and exits 0.
+        run: |
+          git submodule update --init --remote --checkout diataxis
+          test -f diataxis/index.rst  # fail loudly if checkout didn't happen
 
       - name: Install pandoc
         run: |
