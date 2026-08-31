@@ -1,0 +1,58 @@
+name: Update llms.txt from upstream
+
+on:
+  schedule:
+    # Daily at 06:17 UTC (odd minute to avoid the top-of-hour cron stampede)
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/update.yml"
+      - ".gitmodules"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-llms-txt
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Update diataxis submodule to latest upstream
+        run: git submodule update --remote --checkout diataxis
+
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build llms.txt and llms-full.txt
+        run: python scripts/build.py
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Up to date — nothing to commit."
+          else
+            UPSTREAM_SHA=$(git -C diataxis rev-parse --short HEAD)
+            git commit -m "Rebuild llms.txt from diataxis@${UPSTREAM_SHA}"
+            git push
+          fi
