@@ -25,7 +25,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "diataxis"
+SUBMODULE = ROOT / "diataxis"
+# The upstream repo keeps its Sphinx source under source/; fall back to the
+# repo root in case that layout ever changes back.
+SRC = SUBMODULE / "source" if (SUBMODULE / "source" / "index.rst").exists() else SUBMODULE
 SITE = "https://diataxis.fr"
 UPSTREAM = "https://github.com/evildmp/diataxis-documentation-framework"
 
@@ -42,7 +45,7 @@ def run(cmd: list[str]) -> str:
 
 
 def submodule_sha() -> str:
-    return run(["git", "-C", str(SRC), "rev-parse", "HEAD"]).strip()
+    return run(["git", "-C", str(SUBMODULE), "rev-parse", "HEAD"]).strip()
 
 
 def toctree_targets(rst_path: Path) -> list[str]:
@@ -174,7 +177,8 @@ Built from source commit {sha} of
 def main() -> None:
     if not (SRC / "index.rst").exists():
         print(
-            "error: diataxis submodule not found. Run:\n"
+            "error: diataxis submodule source not found (looked for "
+            f"{SRC / 'index.rst'}). Run:\n"
             "  git submodule update --init",
             file=sys.stderr,
         )

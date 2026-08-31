@@ -33,7 +33,10 @@ jobs:
         # uninitialized submodules and exits 0.
         run: |
           git submodule update --init --remote --checkout diataxis
-          test -f diataxis/index.rst  # fail loudly if checkout didn't happen
+          # Fail loudly if the checkout didn't produce the Sphinx source.
+          # The upstream repo keeps it under source/; older layouts had it
+          # at the repo root.
+          test -f diataxis/source/index.rst || test -f diataxis/index.rst
 
       - name: Install pandoc
         run: |
