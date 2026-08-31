@@ -1,0 +1,48 @@
+<!--
+Diátaxis — a systematic approach to technical documentation authoring.
+Copyright © Daniele Procida. https://diataxis.fr
+
+This file is an adaptation of the Diátaxis documentation, converted from
+its reStructuredText source to Markdown and reformatted for consumption
+by language models (llms.txt).
+
+Licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/
+
+This adaptation is likewise licensed under CC BY-SA 4.0.
+
+Modifications: converted from reStructuredText to Markdown, concatenated,
+and reformatted; Sphinx-specific markup removed. Content otherwise
+unaltered.
+
+Built from source commit 957c09ca40b4a1edc23874f713e01937d50d54d5 of
+https://github.com/evildmp/diataxis-documentation-framework
+-->
+
+# Diátaxis
+
+> A systematic approach to technical documentation authoring. Diátaxis identifies four kinds of documentation — tutorials, how-to guides, reference and explanation — and places them in a systematic relationship based on user needs.
+
+The complete content of every page is available in a single file at llms-full.txt alongside this one.
+
+## Docs
+
+- [Diátaxis](https://diataxis.fr/): Home \<self\>
+- [Start here - Diátaxis in five minutes](https://diataxis.fr/start-here/): Treat this website as a handbook or a toolbox that you make use of when you need it.
+- [Applying Diátaxis](https://diataxis.fr/application/): The pages in this section are concerned with putting Diátaxis into practice.
+- [Tutorials](https://diataxis.fr/tutorials/): A tutorial is a *practical activity*, in which the student learns by doing something meaningful, towards some achievable goal.
+- [How-to guides](https://diataxis.fr/how-to-guides/): A how-to guide helps the user get something done, correctly and safely; it guides the user's *action*.
+- [Reference](https://diataxis.fr/reference/): Reference material contains *propositional or theoretical* knowledge that a user looks to in their *work*.
+- [Explanation](https://diataxis.fr/explanation/): Explanation deepens and broadens the reader's understanding of a subject. It brings clarity, light and context.
+- [The compass](https://diataxis.fr/compass/): The Diátaxis map is an effective reminder of the different kinds of documentation and their relationship, and it accords well with intuitions about documentation.
+- [Diátaxis as a guide to work](https://diataxis.fr/how-to-use-diataxis/): As well as providing a guide to documentation content, Diátaxis is also a guide to documentation process and execution.
+- [Understanding Diátaxis](https://diataxis.fr/theory/): The pages in this section are intended to provide some theoretical grounding for the practices Diátaxis prescribes, and to explore some of the questions it raises.
+- [Foundations](https://diataxis.fr/foundations/): Diátaxis is successful because it *works* - both users and creators have a better experience of documentation as a result. It makes sense and it feels right.
+- [The map](https://diataxis.fr/map/): One reason Diátaxis is effective as a guide to organising documentation is that it describes a **two-dimensional structure**, rather than a *list*.
+- [Towards a theory of quality in documentation](https://diataxis.fr/quality/): Diátaxis is an approach to *quality* in documentation.
+- [The difference between a tutorial and how-to guide](https://diataxis.fr/tutorials-how-to/): In Diátaxis, tutorials and how-to guides are strongly distinguished. It’s a distinction that’s often not made; in fact the single most common conflation made in software product documentation is...
+- [The difference between reference and explanation](https://diataxis.fr/reference-explanation/): Explanation and reference both belong to the *theory* half of the Diátaxis map - they don't contain steps to guide the reader, they contain theoretical knowledge.
+- [Colophon](https://diataxis.fr/colophon/): Diátaxis is the work of Daniele Procida.
+- [Help translate Diátaxis](https://diataxis.fr/translation/): If you'd like to help translate Diátaxis into your language, that would be very welcome.
+- [News & Updates](https://diataxis.fr/news/): New atom feed
