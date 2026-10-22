@@ -1133,7 +1133,7 @@ There's a strong urge to work in a cycle of planning and execution in order to w
 
 A good model for documentation is **well-formed organic growth that adapts to external conditions**. Organic growth takes place at the cellular level. The structure of the organism as a whole is guaranteed by the healthy development of cells, according to rules that are appropriate to each kind of cell. It's not the other way round, that a structure is imposed on the organism from above or outside. Good structure develops from within.
 
-<figure>
+<figure class="wider">
 <img src="/images/always-complete.jpg" alt="/images/always-complete.jpg" />
 <figcaption>Illustration copyright <a href="https://linettevoller.com">Linette Voller</a> 2021, reproduced with kind permission.</figcaption>
 </figure>
@@ -1270,14 +1270,14 @@ Even so, authors often find themselves needing to write particular documentation
 
 A clear advantage of organising material this way is that it provides both clear *expectations* (to the reader) and *guidance* (to the author). It's clear what the purpose of any particular piece of content is, it specifies how it should be written and it shows where it should be placed.
 
-|                      | `Tutorials <tutorials>`          | `How-to guides <how-to>`          | `Reference <reference>`                  | `Explanation <explanation>`           |
-|----------------------|----------------------------------|-----------------------------------|------------------------------------------|---------------------------------------|
-| what they do         | introduce, educate, lead         | guide                             | state, describe, inform                  | explain, clarify, discuss             |
-| answers the question | "Can you teach me to...?"        | "How do I...?"                    | "What is...?"                            | "Why...?"                             |
-| oriented to          | learning                         | goals                             | information                              | understanding                         |
-| purpose              | to provide a learning experience | to help achieve a particular goal | to describe the machinery                | to illuminate a topic                 |
-| form                 | a lesson                         | a series of steps                 | dry description                          | discursive explanation                |
-| analogy              | teaching a child how to cook     | a recipe in a cookery book        | information on the back of a food packet | an article on culinary social history |
+|  | `Tutorials <tutorials>` | `How-to guides <how-to>` | `Reference <reference>` | `Explanation <explanation>` |
+|----|----|----|----|----|
+| what they do | introduce, educate, lead | guide | state, describe, inform | explain, clarify, discuss |
+| answers the question | "Can you teach me to...?" | "How do I...?" | "What is...?" | "Why...?" |
+| oriented to | learning | goals | information | understanding |
+| purpose | to provide a learning experience | to help achieve a particular goal | to describe the machinery | to illuminate a topic |
+| form | a lesson | a series of steps | dry description | discursive explanation |
+| analogy | teaching a child how to cook | a recipe in a cookery book | information on the back of a food packet | an article on culinary social history |
 
 Each piece of content is of a kind that not only has one particular job to do, that job is also clearly distinguished from and contrasted with the other functions of documentation.
 
